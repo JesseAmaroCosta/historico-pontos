@@ -2,7 +2,7 @@
 ## Projeto desenvolvido para registrar o histórico de pontuação de jogadoras de basquete. 
 
 <h4 align="center"> 
-	🚧  Projeto em Desenvolvimento 🚧
+	🚧 -- 🚧
 </h4>
 
 ### Funcionalidades
@@ -22,9 +22,45 @@ As seguintes funcionalidades estão disponíveis no programa:
 Para utilizar o programa você vai precisar baixar ... etc etc para o seu computador, disponível no link:
 [teste](https://pages.github.com/).
 
+
 ### Testando as Funcionalidades do programa
 
-Para testar as funcionalidades ...
+A tela a seguir representa a tela principal do programa. 
+
+![Tela Inicial do Programa](https://i.imgur.com/s3SIy25.png)
+
+
+**Para cadastrar uma nova jogadora, faça o seguinte:**
+
+Na tela principal (Placares), clique na opção Cadrastro de Jogadoras.
+Na tela Cadastro de jogadoras, clique na opção Adicionar Jogadora. 
+Informe o nome da Jogadora e clique em salvar. O nome da nova jogadora aparecerá na tabela abaixo. 
+
+![Cadastro](https://i.imgur.com/EC8aWdE.gif)
+
+
+**Para cadastrar uma pontuação, faça o seguinte:**
+
+Na tela principal (Placares), clique na opção Adicionar Placar.
+Na Tela Adicionando placar, selecione a jogadora, informe o placar e clique em SALVAR. 
+
+![Adicionar Pontos](https://i.imgur.com/AkRDzUz.gif)
+
+
+**Para fazer uma consulta, faça o seguinte:**
+
+Na tela principal do programa (Placares), selecione uma jogadora e clique em consultar.
+Um nova janela será aberta com o histórico de pontos da jogadora.  
+
+![Consulta](https://i.imgur.com/2ODLPdp.gif)
+
+
+**Para remover uma jogadora cadastrada, faça o seguinte:**
+
+Na Tela Principal do programa (Placares), clique em Cadastro de jogadoras. Na Tela seguinte, selecione a jogadora desejada e clique em remover. 
+
+![Remover](https://i.imgur.com/J9aPF92.gif)
+
 
 ### 🛠 IDE
 

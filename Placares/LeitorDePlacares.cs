@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace Placares
 {
+    /// <summary>
+    /// Baseado nos dados de uma Jogadora, processa valores de um placar.
+    /// </summary>
     public class LeitorDePlacares
     {
         private Jogadora jogadoraAlvo;
@@ -13,6 +16,10 @@ namespace Placares
            jogadoraAlvo = jogadora;
         }
 
+        /// <summary>
+        /// Cria uma lista com todos os placares de uma jogadora específica, baseando-se nos pontos.
+        /// </summary>
+        /// <returns></returns>
         public List<PlacarViewModel> LerPlacares()
         {
             List<PlacarViewModel> resultado = new List<PlacarViewModel>();

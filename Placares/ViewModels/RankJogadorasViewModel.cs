@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Placares.ViewModels
 {
+    /// <summary>
+    /// Agrupa dados de uma posição do Rank de jogadoras.
+    /// </summary>
     public class RankJogadorasViewModel
     {
         public string Nome { get; set; }

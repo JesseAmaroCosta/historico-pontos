@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Placares
 {
+    /// <summary>
+    /// Representa uma jogadora cadastrada na aplicação.
+    /// </summary>
     public class Jogadora
     {
         public Jogadora()

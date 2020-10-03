@@ -19,6 +19,10 @@ namespace Placares
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Cria um novo objeto de Jogadora para representar a jogadora
+            // e insere o objeto na lista de jogadoras da aplicação.
+            // Após isso, solicita que os dados sejam salvos no banco.
+
             Jogadora jogadora = new Jogadora();
             jogadora.Nome = textBox1.Text;
 

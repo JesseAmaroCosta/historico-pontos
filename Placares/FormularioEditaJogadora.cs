@@ -22,6 +22,7 @@ namespace Placares
             jogadoraDaTela = jogadora;
             textBox1.Text = jogadora.Nome;
 
+            // Obtem os placares processados na classe LeitorDePlacares.
             LeitorDePlacares leitorDePlacares = new LeitorDePlacares(jogadora);
             List<PlacarViewModel> placares = leitorDePlacares.LerPlacares();
 
@@ -30,6 +31,7 @@ namespace Placares
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Altera e salva o novo nome da jogadora apenas se o nome foi alterado.
             if (textBox1.Text != jogadoraDaTela.Nome)
             {
                 jogadoraDaTela.Nome = textBox1.Text;

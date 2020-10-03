@@ -14,6 +14,7 @@ namespace Placares
 {
     public partial class FormularioPrincipal : Form
     {
+        // Lista com as jogadoras cadastradas nos sistemas.
         public static List<Jogadora> jogadoras = new List<Jogadora>();
 
         BindingSource sourceConsulta;
@@ -22,10 +23,14 @@ namespace Placares
         public FormularioPrincipal()
         {
             InitializeComponent();
+
+            // Carrega os dados do banco.
             CarregarListaJogadoras();
 
             CriaRankSource();
 
+            // O objeto BindingList serve para conectar a lista de jogadoras com a grid.
+            // Dessa forma, é possível recarregar a grid quando a lista atualizar.
             BindingList<Jogadora> bindingList = new BindingList<Jogadora>(jogadoras);
             sourceConsulta = new BindingSource(bindingList, null);
 
@@ -33,7 +38,10 @@ namespace Placares
             comboBox1.DisplayMember = "nome";
             comboBox1.ValueMember = "nome";
         }
-
+        
+        /// <summary>
+        /// Gera os dados do Rank e atualiza a grid de Rank de jogadoras.
+        /// </summary>
         private void CriaRankSource()
         {
             List<RankJogadorasViewModel> rankJogadoras = new List<RankJogadorasViewModel>();
@@ -51,14 +59,17 @@ namespace Placares
                 rankJogadoras.Add(rankJogadorasViewModel);
             }
 
+            // Ordena decrescentemente a lista de rank pelo valor máximo da jogadora na temporada.
             List<RankJogadorasViewModel> listaOrdenada = rankJogadoras.OrderByDescending(x => x.MaxTemporada).ToList();
 
+            // Com a lista ordenada corretamente, preenche o valor de Posicao com a posição na lista.
             for (int i = 0; i < listaOrdenada.Count; i++)
             {
                 RankJogadorasViewModel item = listaOrdenada[i];
                 item.Posicao = (i + 1) + "°";
             }
 
+            // Cria um objeto BindingList para conectar à grid a lista ordenada do rank.
             BindingList<RankJogadorasViewModel> bindingList = new BindingList<RankJogadorasViewModel>(listaOrdenada);
             sourceRank = new BindingSource(bindingList, null);
 
@@ -67,23 +78,27 @@ namespace Placares
 
         private void FormularioJogadora_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Recarrega a grid de Rank e também o Combobox de jogadoras ao fechar o formulário de Cadastro de Jogadoras.
             CriaRankSource();
             sourceConsulta.ResetBindings(false);
         }
 
         private void FormularioPlacar_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Recarrega a grid de Rank ao fechar o formulário de Placar.
             CriaRankSource();
         }
 
         private void FormularioEditaJogadora_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // Recarrega a grid de Rank e também o Combobox de jogadoras ao fechar o formulário de Edição de Jogadora.
             CriaRankSource();
             sourceConsulta.ResetBindings(false);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // Abre o formulário de Placar.
             FormularioPlacar formularioPlacar = new FormularioPlacar();
             formularioPlacar.FormClosed += FormularioPlacar_FormClosed;
             formularioPlacar.ShowDialog();
@@ -91,11 +106,17 @@ namespace Placares
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // Abre o formulário de Cadastro de Jogadoras.
             FormularioCadastroJogadora formularioJogadora = new FormularioCadastroJogadora();
             formularioJogadora.FormClosed += FormularioJogadora_FormClosed;
             formularioJogadora.ShowDialog();
         }
 
+        /// <summary>
+        /// Pega da lista de jogadoras um objeto de Jogadora com o mesmo nome informado no parâmetro.
+        /// </summary>
+        /// <param name="nomeSelecionado"></param>
+        /// <returns></returns>
         public static Jogadora PegaJogadoraPorNome(string nomeSelecionado)
         {
             foreach (Jogadora jogadora in jogadoras)
@@ -113,6 +134,7 @@ namespace Placares
             string nomeJogadora = (string)comboBox1.SelectedValue;
             Jogadora jogadora = PegaJogadoraPorNome(nomeJogadora);
 
+            // Abre a janela de consulta apenas quando o usuário selecionou o item no ComboBox.
             if (jogadora != null)
             {
                 FormularioEditaJogadora formularioEditaJogadora = new FormularioEditaJogadora(jogadora);

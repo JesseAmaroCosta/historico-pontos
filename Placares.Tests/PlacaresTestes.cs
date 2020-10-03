@@ -7,6 +7,10 @@ namespace Placares.Tests
 {
     public class PlacaresTestes
     {
+        /// <summary>
+        /// Testa o método LeitorDePlacares.LerPlacares. Teste específico sobre o cálculo de Recorde Máximo.
+        /// </summary>
+        /// <param name="expected"></param>
         [Theory]
         [InlineData(2)]
         public void TestaRecordeMaximo(int expected)
@@ -22,6 +26,11 @@ namespace Placares.Tests
             Assert.Equal(placares[2].RecordMaximo, expected);
         }
 
+        /// <summary>
+        /// Testa o método LeitorDePlacares.LerPlacares. Teste específico sobre o cálculo de Recorde Mínimo.
+        /// </summary>
+        /// <param name="recordMinimoA"></param>
+        /// <param name="recordMinimoB"></param>
         [Theory]
         [InlineData(1, 2)]
         public void TestaRecordeMinimo(int recordMinimoA, int recordMinimoB)

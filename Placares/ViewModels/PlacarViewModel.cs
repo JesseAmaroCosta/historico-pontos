@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Placares.ViewModels
 {
+    /// <summary>
+    /// Agrupa dados de um jogo específico.
+    /// </summary>
     public class PlacarViewModel
     {
         public int Jogo { get; set; }

@@ -28,14 +28,18 @@ namespace Placares
 
             Jogadora jogadoraSelecionado = FormularioPrincipal.PegaJogadoraPorNome(nomeSelecionado);
 
+            // Verifica se o ponto informado pelo usuário é valido e se for, adiciona o Ponto na lista
+            // da jogadora selecionada.
             if (jogadoraSelecionado.PontoEhValido(ponto))
             {
                 jogadoraSelecionado.Pontos.Add(ponto);
+
+                // Após alterado a lista de pontos, solicita que sejam salvos os dados no banco.
                 FormularioPrincipal.PersistirJogadoras();
             }
             else
             {
-                MessageBox.Show("Valor informado deve ser maior que 0 e menor que 1000.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Valor informado para o campo \"Placar\" deve ser maior que 0 e menor que 1000.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             Close();

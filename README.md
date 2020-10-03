@@ -1,11 +1,11 @@
 # Projeto – Histórico de Pontos
-## Projeto desenvolvido para registrar o histórico de pontuação de jogadoras de basquete. 
+### **Projeto desenvolvido para registrar o histórico de pontuação de jogadoras de basquete**. 
 
 <h4 align="center"> 
 	🚧 -- 🚧
 </h4>
 
-### Funcionalidades
+### 🛠 Funcionalidades
 
 As seguintes funcionalidades estão disponíveis no programa:
 
@@ -17,7 +17,7 @@ As seguintes funcionalidades estão disponíveis no programa:
 - [x] Calculo da quebra de record
 - [x] Calculo do mínimo e máximo de pontos
 
-### Pré-requisitos
+### 🛠 Pré-requisitos
 
 Para utilizar o programa você vai precisar baixar ... etc etc para o seu computador, disponível no link:
 [teste](https://pages.github.com/).
@@ -70,8 +70,12 @@ O programa foi desenvolvido utilizando a IDE Visual Studio Community 2019. - [VS
 
 Os seguintes frameworks foram utilizados na construção do projeto:
 
-- [JSON](https://www.json.org/json-en.html/)
-- [xUnit](https://xunit.net/)
+- [Newtonsoft.JSON](https://www.newtonsoft.com/json) - Utilizado para guardar as informações das jogadoras. 
+- [xUnit](https://xunit.net/) - Utilizado para realizar os testes unitários. 
+
+### 🛠 Testes Unitários
+
+Os testes unitários do programa são realizados com a ferramenta xUnit. [xUnit](https://xunit.net/)
 
 ### Autor
 

@@ -19,8 +19,8 @@ As seguintes funcionalidades estão disponíveis no programa:
 
 ### 🛠 Pré-requisitos
 
-Para utilizar o programa você vai precisar baixar ... etc etc para o seu computador, disponível no link:
-[teste](https://pages.github.com/).
+Para utilizar o programa você precisa baixar e executar o arquivo Placares.exe disponivel em:
+[Placares.exe](https://drive.google.com/file/d/1zYdLhUPoKnsUAbHHxfaQXrozdTNoBjGT/view?usp=sharing).
 
 
 ### Testando as Funcionalidades do programa
